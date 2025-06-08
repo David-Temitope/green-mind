@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Products | GreenMind</title>
+    <link rel="stylesheet" href="css/products.css">
+</head>
+<body>
+    <header>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="products.html" class="active">Products</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="blog.html">Blog</a></li>
+        </ul>
+        <h1>Our Products</h1>
+        <p>Discover our range of organic gardening tools, seeds, and fertilizers.</p>
+    </header>
+    <main>
+        <section>
+            <div class="product-controls">
+                <input type="search" placeholder="Search for products..." class="searchBar">
+                <label for="category">Filter by category:</label>
+                <select name="category" id="category">
+                    <option value="all">All</option>
+                    <option value="tools">Tools</option>
+                    <option value="seeds">Seeds</option>
+                    <option value="fertilizers">Fertilizers</option>
+                </select>
+                <button class="filterBtn btn">Filter</button>
+            </div>
+            <div id="products-container" class="productContainer"></div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 GreenMind Organics. All rights reserved.</p>
+        <p>Follow us on social media: 
+            <a href="https://facebook.com" target="_blank">Facebook</a> | 
+            <a href="https://twitter.com" target="_blank">Twitter</a> | 
+            <a href="https://instagram.com" target="_blank">Instagram</a>
+        </p>
+    </footer>
+
+    <script>
+        function add(productName) {
+            const qty = prompt(`How many ${productName} would you love to buy:`);
+            if (qty && !isNaN(qty) && Number(qty) > 0) {
+                alert(`You have added ${qty} ${productName}${Number(qty) > 1 ? 's' : ''} to your cart`);
+            } else if (qty !== null) {
+                alert("Please enter a valid number");
+            }
+        }
+
+        // Fetch and display products
+        fetch('data/products.json')
+            .then(response => response.json())
+            .then(data => {
+                const container = document.getElementById('products-container');
+                container.innerHTML = '';
+                data.forEach(product => {
+                    const div = document.createElement('div');
+                    div.className = 'productCard';
+                    div.innerHTML = `
+                        <img src="${product.image || 'assets/talent.avif'}" alt="${product.title}">
+                        <h2>${product.title}</h2>
+                        <p>${product.description || ''}</p>
+                        <button onclick="add('${product.title}')">Add to cart</button>
+                    `;
+                    container.appendChild(div);
+                });
+            })
+            .catch(() => {
+                document.getElementById('products-container').innerHTML = '<p>Unable to load products.</p>';
+            });
+    </script>
+</body>
+</html>

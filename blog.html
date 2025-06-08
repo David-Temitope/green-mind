@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | GreenMind</title>
+    <link rel="stylesheet" href="css/blog.css">
+</head>
+<body>
+    <header>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="blog.html" class="active">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <h1>GreenMind Blog</h1>
+        <p>Tips, stories, and inspiration for organic gardeners.</p>
+    </header>
+    <main>
+        <section>
+            <h2>Garden Bookshop</h2>
+            <p>Explore our collection of gardening books, from beginner guides to advanced techniques.</p>
+            <div class="bookshop">
+                <img src="images/bookshop.jpg" alt="Garden Bookshop">
+                <p>Book a call with us to find the perfect gardening book for your needs.</p>
+                <a href="booker.html"><button>Visit Bookshop</button></a>
+            </div>
+        </section>
+        <section>
+            <h2>Latest Blog Posts</h2>
+            <div id="blog-list" class="blog-list"></div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 GreenMind Organics. All rights reserved.</p>
+        <p>Follow us on social media: 
+            <a href="https://facebook.com" target="_blank">Facebook</a> | 
+            <a href="https://twitter.com" target="_blank">Twitter</a> | 
+            <a href="https://instagram.com" target="_blank">Instagram</a>
+        </p>
+    </footer>
+
+    <script>
+        fetch('data/blog.json')
+        .then(response => response.json())
+        .then(data => {
+            const blogList = document.getElementById('blog-list');
+            blogList.innerHTML = '';
+            if (Array.isArray(data) && data.length > 0) {
+                data.forEach(post => {
+                    const article = document.createElement('article');
+                    article.className = 'blog-post';
+                    article.innerHTML = `
+                        <h2>${post.title}</h2>
+                        <p class="blog-meta">Posted on ${post.date} by ${post.author}</p>
+                        <p>${post.content}</p>
+                        <a href="${post.url || '#'}" class="btn">Read More</a>
+                    `;
+                    blogList.appendChild(article);
+                });
+            } else {
+                blogList.innerHTML = '<p>No blog posts available.</p>';
+            }
+        })
+        .catch(() => {
+            document.getElementById('blog-list').innerHTML = '<p>Unable to load blog posts.</p>';
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,156 @@
+/* Global reset and base styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #f4fdf4;
+    color: #2e4d2e;
+    padding: 0 1rem;
+}
+
+/* Header styling */
+header {
+    background-color: #cde6cd;
+    text-align: center;
+    padding: 2rem 1rem;
+    border-bottom: 2px solid #95c595;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    font-size: 1.1rem;
+    color: #3b5f3b;
+    margin-bottom: 1rem;
+}
+
+/* Navigation styling */
+header ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+}
+
+header ul li a {
+    text-decoration: none;
+    color: #2e4d2e;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+header ul li a:hover,
+header ul li a.active {
+    color: #1c3b1c;
+    text-decoration: underline;
+}
+
+/* Button styling */
+button {
+    background-color: #4caf50;
+    color: white;
+    padding: 0.6rem 1.2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #3b9a42;
+}
+
+/* Main content */
+main {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 1rem;
+}
+
+/* Section styling */
+section h2 {
+    margin-top: 2rem;
+    font-size: 1.8rem;
+    color: #2e4d2e;
+}
+
+section p {
+    margin-top: 0.8rem;
+    color: #3d5a3d;
+}
+
+/* Founder section */
+.founder {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.founder-img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border: 3px solid #4caf50;
+}
+
+.founder h2 {
+    font-size: 1.5rem;
+    margin: 0.5rem 0 0.3rem;
+}
+
+/* Blog posts */
+.blog-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.blog-post {
+    background-color: #e7f6e7;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+.blog-post h2 {
+    color: #2e4d2e;
+    margin-bottom: 0.5rem;
+}
+
+.blog-meta {
+    font-size: 0.9rem;
+    color: #5d7a5d;
+    margin-bottom: 1rem;
+}
+
+/* Footer styling */
+footer {
+    background-color: #cde6cd;
+    padding: 1.2rem;
+    text-align: center;
+    font-size: 0.9rem;
+    margin-top: 3rem;
+    border-top: 2px solid #95c595;
+}
+
+footer a {
+    color: #2e4d2e;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}

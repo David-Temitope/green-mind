@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book a Session | GreenMind</title>
+    <link rel="stylesheet" href="css/book.css">
+</head>
+<body>
+    <header>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+        <h1>Book a Session</h1>
+        <p>Schedule a personalized gardening session with our experts to get tailored advice and tips for your garden.</p>
+    </header>
+
+    <main>
+        <section>
+            <form action="" class="contact-form">
+                <label for="name">Name</label>
+                <input type="text" id="name" placeholder="Enter your full name" required>
+
+                <label for="phone">Phone Number</label>
+                <input type="text" id="phone" placeholder="Enter your phone number" required>
+
+                <button type="submit" id="btn" onclick="book()">Book</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 GreenMind Organics. All rights reserved.</p>
+        <p>Follow us on social media: 
+            <a href="https://facebook.com" target="_blank">Facebook</a> | 
+            <a href="https://twitter.com" target="_blank">Twitter</a> | 
+            <a href="https://instagram.com" target="_blank">Instagram</a>
+        </p>
+    </footer>
+
+    <script>
+       function book() {
+            const name = document.getElementById('name').value;
+            const phone = document.getElementById('phone').value;
+
+            if (name && phone) {
+                alert(`Thank you, ${name}! Your session has been booked successfully. We will contact you through ${phone} to schedule a meeting day.`);
+                // Here you can add code to send the data to a server or process it further
+            } else {
+                alert('Please fill in all fields.');
+            }
+        }
+    </script>
+</body>
+</html>

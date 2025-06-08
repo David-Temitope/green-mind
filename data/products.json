@@ -1,0 +1,67 @@
+[
+  { "image": "https://plus.unsplash.com/premium_photo-1664475322667-f65c7b444fa5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8b3JnYW5pYyUyMGZlcnRpbGl6ZXJ8ZW58MHx8MHx8fDA%3D",
+    "title": "Organic Fertilizer",
+    "description": "Boost your garden naturally with our compost-rich fertilizer.",
+    "price": "12.99"
+  },
+  {
+    "image": "https://media.istockphoto.com/id/601400384/photo/medicinal-neem.webp?a=1&b=1&s=612x612&w=0&k=20&c=1BuP8u9HHzjeFs7YXVt4ia7OA7oGs7Mdn79PJ8f2i_s=",
+    "title": "Herbal Pesticide",
+    "description": "Eco-friendly pest control for your plants.",
+    "price": "8.49"
+  },
+    {
+        "image": "https://media.istockphoto.com/id/1430009914/photo/garden-equipment.webp?a=1&b=1&s=612x612&w=0&k=20&c=RE-FiuP-CvvVUeKQ29dvzOAyoXIsosrwOMDrci64fB4=",
+        "title": "Garden Trowel",
+        "description": "Ergonomic trowel for easy planting and digging.",
+        "price": "15.00"
+    },
+    {
+        "image": "https://media.istockphoto.com/id/184147893/photo/watering-can.webp?a=1&b=1&s=612x612&w=0&k=20&c=8A-shGrLpCmQaKGTAEvWhD00OnNuUD_hU7mAYvs1eME=",
+        "title": "Watering Can",
+        "description": "Stylish and functional watering can with a long spout.",
+        "price": "10.50"
+    },
+    {
+        "image": "https://media.istockphoto.com/id/2182320562/photo/12holes-organic-planting-pot-biodegradable-seedling-kit-plants-seed-starter-cup-germination.webp?a=1&b=1&s=612x612&w=0&k=20&c=zcf3BJ8tnnnRqgy-jM8Rgv7040thar03eGN7e3-V7f4=",
+        "title": "Seed Starter Kit",
+        "description": "Everything you need to start your garden from seeds.",
+        "price": "25.00"
+    },
+    {
+        "image": "https://media.istockphoto.com/id/136165986/photo/yellow-work-gloves-with-clipping-path.webp?a=1&b=1&s=612x612&w=0&k=20&c=3F5PEHSI8zzmYt4cbKLzE-o-Ikw9PNzi8QWDI9mwoV8=",
+        "title": "Garden Gloves",
+        "description": "Durable gloves to protect your hands while gardening.",
+        "price": "7.99"
+    },
+    {
+        "image": "https://plus.unsplash.com/premium_photo-1724661472309-6881d9947bfb?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fENvbXBvc3QlMjBCaW58ZW58MHx8MHx8fDA%3D",
+        "title": "Compost Bin",
+        "description": "Eco-friendly compost bin for recycling kitchen waste.",
+        "price": "30.00"
+    },
+    {
+        "image": "https://media.istockphoto.com/id/674747508/photo/watering-the-plants.webp?a=1&b=1&s=612x612&w=0&k=20&c=qtPQUzaQLQyq5JNyfgyVGi-XkNmHZcQRU8FiRREG_88=",
+        "title": "Garden Hose",
+        "description": "Flexible and durable garden hose for easy watering.",
+        "price": "20.00"
+    },
+    {
+        "image": "https://media.istockphoto.com/id/997008384/photo/detail-of-rake-in-autumn-season-raking-in-garden.webp?a=1&b=1&s=612x612&w=0&k=20&c=kKZYWay2jUFDiJLkVg0tX0G66XhGKDZo6Qa7RHx9Gd4=",
+        "title": "Garden Rake",
+        "description": "Heavy-duty rake for clearing leaves and debris.",
+        "price": "18.00"
+    },
+    {
+        "image": "https://media.istockphoto.com/id/1298515744/photo/empty-flower-pot.webp?a=1&b=1&s=612x612&w=0&k=20&c=1ZSeR81C2xeDCVIu1PlcPP67KaqXwHlZTnAxvxvAQoc=",
+        "title": "Plant Pots",
+        "description": "Stylish pots for indoor and outdoor plants.",
+        "price": "14.99"
+    },
+    {
+        "image": "https://media.istockphoto.com/id/1146880196/photo/petrol-hedge-trimmer.webp?a=1&b=1&s=612x612&w=0&k=20&c=PaBuvGomxiapymRspGNJVP2ydTHumXZUh2lTqnXJnIc=",
+        "title": "Garden Shears",
+        "description": "Sharp shears for precise pruning and trimming.",
+        "price": "22.50"
+    }
+]

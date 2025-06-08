@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreenMind Organics</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="blog.html">Blog</a></li>
+        </ul>
+        <h1>Welcome to GreenMind Organics</h1>
+        <p>Your source for organic gardening supplies and advice.</p>
+        <a href="booker.html"><button>Book a session</button></a>
+    </header>
+
+    <main>
+        <section id="product-list">
+            <h2>Our Products</h2>
+             <a href="products.html">View all</a>
+            <div id="products-container"></div>
+        </section>
+
+
+        <section>
+            <h2>What our clients say</h2>
+            <div class="testimoniaSlider">
+                <div class="testimonial">
+                    <p>"GreenMind Organics transformed my garden! The organic fertilizer made a huge difference."</p>
+                    <p>- Sarah J.</p>
+                </div>
+                <div class="testimonial">
+                    <p>"I love the compost bin! It's easy to use and my plants are thriving."</p>
+                    <p>- Mark T.</p>
+                </div>
+                <div class="testimonial">
+                    <p>"The herb seeds I bought sprouted quickly and are growing beautifully."</p>
+                    <p>- Emily R.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 GreenMind Organics. All rights reserved.</p>
+        <p>Follow us on social media: 
+            <a href="https://facebook.com" target="_blank">Facebook</a> | 
+            <a href="https://twitter.com" target="_blank">Twitter</a> | 
+            <a href="https://instagram.com" target="_blank">Instagram</a>
+        </p>
+    </footer>
+
+    <script>
+        function addToCart(productName) {
+            alert(`One ${productName} has been added to your cart`)
+        }
+    </script>
+    <script>
+        fetch('data/products.json')
+        .then(response => response.json())
+        .then(data => {
+            const container = document.getElementById('products-container');
+            // Show only the first three products
+            data.slice(0, 3).forEach(product => {
+                const div = document.createElement('div');
+                div.className = 'product-card';
+                div.innerHTML = `
+                    <img src="${product.image}" alt="${product.name}">
+                    <h3>${product.title}</h3>
+                    <p>${product.description}</p>
+                    <p>Price: $${product.price}</p>
+                    <button onclick="addToCart('${product.title}')">Add to Cart</button>
+                `;
+                container.appendChild(div);
+            });
+        })
+        .catch(error => {
+            console.error('Error fetching products:', error);
+            const container = document.getElementById('products-container');
+            container.innerHTML = '<p>Failed to load products. Please try again later.</p>';
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "title": "5 Tips for a Thriving Organic Garden",
+        "author": "Jane Doe",
+        "date": "2023-10-01",
+        "content": "Discover essential tips to help your organic garden flourish, from improving soil health to natural pest control. Learn how to choose the right plants, water efficiently, and create a thriving ecosystem in your backyard.",
+        "tags": ["Gardening", "Organic", "Tips"]
+    },
+    {
+        "id": 2,
+        "title": "Composting 101: Turn Waste into Gold",
+        "author": "John Smith",
+        "date": "2023-10-05",
+        "content": "Composting is a simple way to recycle kitchen and garden waste into nutrient-rich soil. This guide covers the basics of composting, what to include, what to avoid, and how to maintain a healthy compost pile.",
+        "tags": ["Composting", "Soil", "Sustainability"]
+    },
+    {
+        "id": 3,
+        "title": "How to Start a Herb Garden at Home",
+        "author": "Alice Johnson",
+        "date": "2023-10-10",
+        "content": "Growing your own herbs is easy and rewarding. Learn how to select the best herbs for your space, prepare soil, plant seeds or seedlings, and care for your herb garden indoors or outdoors.",
+        "tags": ["Herbs", "Home Garden", "Beginner"]
+    }
+]
